@@ -14,3 +14,8 @@ jobs:
           npm -v
           ls -l
           pwd
+      - name: Pythom cmd test
+        run: |
+          import platform
+          print(platform.processor)
+        shell: python
