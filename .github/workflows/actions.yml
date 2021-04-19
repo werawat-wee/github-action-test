@@ -8,8 +8,8 @@ jobs:
     steps:
       - name: Simple JS Action
         id: greet
-        uses: actions/hello-world-javascript-action@ad41a6c27317e688719c813b0d6a25685a9bce54
+        uses: actions/hello-world-javascript-action@v1
         with:
           who-to-greet: Weeee
       - name: Log output
-        run: echo "${{ steps.greet.output.time }}"
+        run: echo "${{ steps.greet.outputs.time }}"
