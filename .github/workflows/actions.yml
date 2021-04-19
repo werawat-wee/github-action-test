@@ -1,0 +1,15 @@
+name: On Push flow - Actions
+
+on: [push]
+
+jobs:
+  run-github-actions:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Simple JS Action
+        id: greet
+        uses: actions/hello-world-javascript-action@ad41a6c27317e688719c813b0d6a25685a9bce54
+        with:
+          who-to-greet: Weeee
+      - name: Log output
+        run: echo "${{ steps.greet.output.time }}"
