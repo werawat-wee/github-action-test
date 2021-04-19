@@ -1,14 +1,14 @@
-name: Shell commands
+name: Basic Shell commands
 
 on: [push]
 
 jobs:
   run-shell-command:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-16.04
     steps:
-      - name: echo a string
+      - name: echo a string test
         run: echo "Hello"
-      - name: Multipline script
+      - name: Multipline script test
         run: |
           node -v
           npm -v
