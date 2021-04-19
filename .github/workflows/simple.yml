@@ -14,8 +14,18 @@ jobs:
           npm -v
           ls -l
           pwd
-      - name: Pythom cmd test
+      - name: Python cmd test
         run: |
           import platform
-          print(platform.processor)
+          print(platform.processor())
         shell: python
+
+  run-windows-cmd:
+    runs-on: windows-latest
+    steps:
+      - name: Test powetshell
+        shell: powershell
+        run: Get-Location
+      - name: Test bash
+        shell: bash
+        run: pwd
