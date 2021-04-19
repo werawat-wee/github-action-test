@@ -1,4 +1,4 @@
-name: Basic Shell commands
+name: On Push flow
 
 on: [push]
 
